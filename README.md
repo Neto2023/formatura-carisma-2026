@@ -1,6 +1,6 @@
 # Votação da Formatura Carisma Intensivo 2026
 
-Formulário online para a turma Carisma Intensivo 2026 (Marabá) escolher o nome da turma e a música de entrada, sugerir paraninfo e professor homenageado e fazer o pedido individual de beca. Cerimônia em 5 de dezembro de 2026. Votação aberta até 31 de outubro de 2026, às 23h59 (horário de Belém).
+Formulário online para a turma Carisma Intensivo 2026 (Marabá) escolher o nome da turma e a música de entrada, indicar o professor homenageado, sugerir o paraninfo e fazer o pedido individual de beca. Cerimônia em 5 de dezembro de 2026. Votação aberta até 31 de outubro de 2026, às 23h59 (horário de Belém).
 
 **Link do formulário:** https://neto2023.github.io/formatura-carisma-2026/
 
@@ -45,7 +45,7 @@ Se o envio falhar, o formulário mostra o voto em texto com o botão "Copiar vot
 
 - Endereço do Apps Script: constante `URL_APPS_SCRIPT` no topo do script do `index.html`.
 - Prazo de encerramento: constante `PRAZO`, que precisa ser igual no `index.html` e no `Code.gs`. Depois de mudar o `Code.gs`, publicar nova versão da implantação (ver LEIA-ME).
-- Opções de nome da turma, músicas e becas: listas `NOMES`, `MUSICAS`, `BECAS`, `PLUMA` e `CANUDO` no `index.html`.
+- Opções de nome da turma, músicas, professores e becas: listas `NOMES`, `MUSICAS`, `PROFESSORES`, `BECAS`, `PLUMA` e `CANUDO` no `index.html`.
 - Valores da beca: `VALOR_BECA` e `VALOR_CANUDO` no `Code.gs`, e a função `valor()` no `index.html`.
 
 Regra de texto do projeto: não usar travessão; usar vírgula, ponto, dois-pontos ou reescrever.
