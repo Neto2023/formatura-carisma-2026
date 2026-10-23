@@ -82,8 +82,8 @@ O Claude Code envia os arquivos. Na primeira vez, o Windows abre uma janela do G
 2. No menu da esquerda, clique em **Pages**.
 3. Em "Build and deployment", Source: **Deploy from a branch**.
 4. Em Branch, escolha **main** e a pasta **/ (root)**. Clique em **Save**.
-5. Espere um ou dois minutos e recarregue a página. O link aparece no topo, no formato:
-   `https://SEU-USUARIO.github.io/formatura-carisma-2026/`
+5. Espere um ou dois minutos e recarregue a página. O link aparece no topo:
+   `https://neto2023.github.io/formatura-carisma-2026/`
 
 ---
 

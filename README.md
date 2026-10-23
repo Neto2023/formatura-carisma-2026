@@ -2,6 +2,8 @@
 
 Formulário online para a turma Carisma Intensivo 2026 (Marabá) escolher o nome da turma e a música de entrada, sugerir paraninfo e professor homenageado e fazer o pedido individual de beca. Cerimônia em 5 de dezembro de 2026. Votação aberta até 31 de outubro de 2026, às 23h59 (horário de Belém).
 
+**Link do formulário:** https://neto2023.github.io/formatura-carisma-2026/
+
 O formando abre o link no celular, sem login, e cada voto vai direto para uma planilha no Google Drive da comissão. A apuração sai pronta para colar no grupo do WhatsApp.
 
 ## Como funciona
