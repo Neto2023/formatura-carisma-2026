@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#681111">
+<title>Votação Formatura Carisma</title>
+<meta name="description" content="Votação da turma Carisma Intensivo 2026: nome da turma, música de entrada e pedido de beca.">
+<meta property="og:title" content="Votação da turma Carisma Intensivo 2026">
+<meta property="og:description" content="Escolha o nome da turma, a música de entrada e a sua beca.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap">
+<style>
+/* Layout: coluna única; cada pergunta é um bloco com opções em cartões selecionáveis. Fundo sempre branco, sem modo escuro. */
+:root{
+  --bg:#FFFFFF; --surface:#FFFFFF; --fg:#2B1717; --muted:#6F5E5A; --line:#E4DED2;
+  --accent:#681111; --accent-ink:#FFFFFF; --gold:#9E3A2C; --sel:#FBF1EF; --warn:#B4472E;
+  --band:#681111; --band-ink:#E0E0D1; --band-soft:#CFC3B4;
+  --display:"Montserrat","Segoe UI",system-ui,sans-serif;
+  --body:"Nunito Sans","Segoe UI",system-ui,sans-serif;
+  --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+[hidden]{display:none !important}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%}
+main{display:block}
+.band{background:var(--band);color:var(--band-ink)}
+.band-in{max-width:720px;margin:0 auto;padding-block:22px 28px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:4px}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.brand img{height:54px;width:auto;display:block}
+.wm{font-family:var(--display);font-size:clamp(17px,4.6vw,21px);letter-spacing:.08em;line-height:1.1;color:var(--band-ink)}
+.wm b{font-weight:800}
+.wm span{font-weight:300}
+.band .eyebrow{color:var(--band-soft)}
+.band h1{color:var(--band-ink);font-weight:800;letter-spacing:-.01em}
+.band .sub{color:var(--band-soft)}
+.wrap{max-width:720px;margin:0 auto;padding-block:24px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:22px}
+
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:0}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(28px,6vw,38px);line-height:1.1;margin:4px 0 6px;text-wrap:balance;color:var(--accent)}
+.sub{color:var(--muted);margin:0}
+.band .prazo{color:var(--band-ink);font-weight:700;margin:8px 0 0;font-size:15px}
+form,.panel{display:flex;flex-direction:column;gap:22px}
+fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;min-width:0}
+legend{font-family:var(--display);font-size:22px;font-weight:700;padding:0;margin-bottom:2px}
+.hint{margin:0;color:var(--muted);font-size:14px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-weight:700}
+input[type=text]{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%;box-sizing:border-box}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.opt{position:relative;display:flex;flex-direction:column;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 42px;cursor:pointer;min-width:0}
+.opt input{position:absolute;left:14px;top:15px;width:18px;height:18px;margin:0;accent-color:var(--accent)}
+.opt:has(input:checked){border-color:var(--accent);background:var(--sel)}
+.opt .on{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline}
+.opt b{font-family:var(--display);font-size:20px;color:var(--accent)}
+.orig{font-family:"Times New Roman",serif;font-size:18px;color:var(--gold)}
+.opt .m{font-size:14px}
+.opt .v{font-size:13px;color:var(--muted);font-style:italic}
+.opt .art{font-size:14px;color:var(--muted)}
+.other{margin-top:4px}
+.sublbl{margin:6px 0 0;font-weight:700}
+.total{margin:0;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+.btn{font:inherit;font-weight:700;border-radius:10px;padding:11px 18px;cursor:pointer;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:disabled{opacity:.6;cursor:progress}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.err{color:var(--warn);font-size:14px;margin:0}
+.priv{margin:0;color:var(--muted);font-size:14px}
+.out{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.out.done{border-color:var(--accent);background:var(--sel)}
+.out h2{font-family:var(--display);font-size:22px;margin:0;color:var(--accent)}
+.resumo{margin:0;display:grid;grid-template-columns:minmax(0,auto) minmax(0,1fr);gap:6px 14px;font-size:15px}
+.resumo dt{color:var(--muted)}
+.resumo dd{margin:0;font-weight:700;overflow-wrap:anywhere}
+pre.txt{font-family:var(--mono);font-size:14px;white-space:pre-wrap;word-break:break-word;margin:0;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px;max-height:420px;overflow:auto}
+.ok{font-size:14px;color:var(--muted)}
+.hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:420px){.resumo{grid-template-columns:1fr;gap:0}.resumo dd{margin-bottom:8px}}
+</style>
+</head>
+<body>
+<main>
+  <header class="band"><div class="band-in">
+    <div class="brand"><img alt="Brasão do Carisma" src="data:image/png;base64,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"><p class="wm"><b>CARISMA</b><span> MARABÁ 2026</span></p></div>
+    <p class="eyebrow">Comissão de Formatura</p>
+    <h1>Votação da turma Carisma Intensivo 2026</h1>
+    <p class="sub">Escolha o nome da turma, a música de entrada e a sua beca. Se quiser, sugira o paraninfo e o professor homenageado.</p>
+    <p class="prazo" id="prazo"></p>
+  </div></header>
+  <div class="wrap">
+
+  <section class="panel" id="p-votar">
+    <div class="out" id="fechada" hidden>
+      <h2>Votação encerrada</h2>
+      <p class="hint">O prazo para votar terminou. Obrigado a todos que participaram. A comissão de formatura vai divulgar o resultado.</p>
+    </div>
+
+    <form id="f" novalidate>
+      <div class="field">
+        <label for="nome">Seu nome completo</label>
+        <input type="text" id="nome" autocomplete="name" placeholder="Como está na lista da turma">
+      </div>
+
+      <fieldset>
+        <legend>Nome da turma</legend>
+        <p class="hint">Sugestões em hebraico e grego, com tradução e versículo.</p>
+        <div class="opts" id="o-nome"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Música de entrada</legend>
+        <div class="opts" id="o-musica"></div>
+        <input type="text" id="musica-outra" class="other" placeholder="Se escolheu outra, escreva aqui a música e o artista" hidden>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sua beca</legend>
+        <p class="hint">Orçamento da Becas Formatura: R$ 120,00, com capa, jabour, faixa, capelo e canudo com o nome do curso.</p>
+        <div class="opts" id="o-beca"></div>
+        <p class="sublbl">Capelo</p>
+        <div class="opts" id="o-pluma"></div>
+        <p class="sublbl">Canudo com o seu nome</p>
+        <div class="opts" id="o-canudo"></div>
+        <div class="field">
+          <label for="tamanho">Tamanho ou altura</label>
+          <input type="text" id="tamanho" placeholder="Ex.: M, ou 1,65 m">
+          <p class="hint">A comissão confirma a tabela de tamanhos com o fornecedor.</p>
+        </div>
+        <p class="total" id="beca-total" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sugestões</legend>
+        <div class="field">
+          <label for="paraninfo">Paraninfo (opcional)</label>
+          <input type="text" id="paraninfo" placeholder="Nome de quem você sugere">
+        </div>
+        <div class="field">
+          <label for="professor">Professor homenageado (opcional)</label>
+          <input type="text" id="professor" placeholder="Nome do professor">
+        </div>
+      </fieldset>
+
+      <div class="hp" aria-hidden="true">
+        <label for="site">Não preencha este campo</label>
+        <input type="text" id="site" tabindex="-1" autocomplete="off">
+      </div>
+
+      <p class="err" id="f-err" role="alert" hidden></p>
+      <div class="row"><button class="btn" type="submit" id="enviar">Enviar meu voto</button></div>
+      <p class="priv">Seu nome e suas escolhas ficam visíveis apenas para a comissão de formatura.</p>
+    </form>
+
+    <div class="out done" id="ok-out" tabindex="-1" hidden>
+      <h2>Voto registrado. Obrigado!</h2>
+      <p class="hint">Confira o que você escolheu:</p>
+      <dl class="resumo" id="resumo"></dl>
+      <p class="hint">Se mudar de ideia, pode votar de novo com o mesmo nome. Vale o último voto enviado.</p>
+      <div class="row"><button class="btn ghost" type="button" id="alterar">Alterar meu voto</button></div>
+    </div>
+
+    <div class="out" id="voto-out" tabindex="-1" hidden>
+      <h2>Não foi possível enviar agora</h2>
+      <p class="hint">Copie o texto abaixo e cole no grupo da turma no WhatsApp, que a comissão registra o seu voto. Não altere as linhas.</p>
+      <pre class="txt" id="voto-txt"></pre>
+      <div class="row"><button class="btn" type="button" id="copiar-voto">Copiar voto</button><span class="ok" id="copiar-voto-ok" aria-live="polite"></span></div>
+      <div class="row"><button class="btn ghost" type="button" id="tentar">Tentar enviar de novo</button></div>
+    </div>
+  </section>
+  </div>
+</main>
+
+<script>
+(function(){
+  // Endereço do app da web do Google Apps Script (termina em /exec). Trocar aqui depois de implantar.
+  var URL_APPS_SCRIPT = 'COLE_AQUI_A_URL_DO_APPS_SCRIPT';
+  // Encerramento da votação, no horário de Belém (UTC-3). Manter igual ao PRAZO de apps-script/Code.gs.
+  var PRAZO = new Date('2026-10-31T23:59:59-03:00');
+  var TEMPO_LIMITE_MS = 20000;
+
+  var MARK = 'VOTO FORMATURA CARISMA 2026';
+  var NOMES = [
+    {n:"Ebenézer", o:"אֶבֶן הָעֵזֶר", l:"Hebraico", m:"Pedra de ajuda.", v:"1 Sm 7:12: “Até aqui nos ajudou o Senhor.”"},
+    {n:"Hineni", o:"הִנֵּנִי", l:"Hebraico", m:"Eis-me aqui.", v:"Is 6:8: “Eis-me aqui, envia-me a mim.”"},
+    {n:"Kairós", o:"καιρός", l:"Grego", m:"O tempo oportuno, o tempo de Deus.", v:"Gl 6:9: “a seu tempo ceifaremos, se não desfalecermos.”"},
+    {n:"Ruach", o:"רוּחַ", l:"Hebraico", m:"Espírito, sopro, vento.", v:"Zc 4:6: “Não por força nem por violência, mas pelo meu Espírito.”"},
+    {n:"Chárisma", o:"χάρισμα", l:"Grego", m:"Dom da graça.", v:"1 Pe 4:10: “Cada um administre aos outros o dom como o recebeu.”"},
+    {n:"Emunah", o:"אֱמוּנָה", l:"Hebraico", m:"Fé, fidelidade, firmeza.", v:"Hc 2:4: “o justo, pela sua fé, viverá.”"}
+  ];
+  var MUSICAS = [
+    {t:"Aclame ao Senhor", a:"Diante do Trono"},
+    {t:"A Ele a Glória", a:"Diante do Trono"},
+    {t:"Grandes Coisas", a:"Fernandinho"},
+    {t:"Bondade de Deus", a:"Isaías Saad"},
+    {t:"Ninguém Explica Deus", a:"Preto no Branco"},
+    {t:"Outra", a:"Sugira abaixo"}
+  ];
+  var BECAS = [
+    {v:"Tradicional", t:"Beca Tradicional", d:"Longa, até o pé. Modelo unissex.", p:"R$ 120,00"},
+    {v:"Vestido", t:"Beca Vestido", d:"Curta, abaixo do joelho. Modelo feminino.", p:"R$ 120,00"}
+  ];
+  var PLUMA = [{v:"Com pluma", t:"Com pluma"}, {v:"Sem pluma", t:"Sem pluma"}];
+  var CANUDO = [{v:"Sim", t:"Sim, com meu nome", d:"Mais R$ 20,00"}, {v:"Não", t:"Não", d:"Só com o nome do curso"}];
+  // Rótulos do voto, na ordem do texto para WhatsApp e do resumo
+  var CAMPOS = [
+    ['Formando(a)', 'nome'], ['Nome da turma', 'turma'], ['Música de entrada', 'musica'],
+    ['Paraninfo sugerido', 'paraninfo'], ['Professor homenageado', 'professor'],
+    ['Beca', 'beca'], ['Capelo', 'capelo'], ['Canudo com nome', 'canudo'], ['Tamanho ou altura', 'tamanho']
+  ];
+  var $ = function(id){ return document.getElementById(id); };
+  function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  // Opções
+  NOMES.forEach(function(x, i){
+    var lab = el('label', 'opt');
+    var r = el('input'); r.type = 'radio'; r.name = 'nome-turma'; r.value = x.n; r.id = 'nt-' + i;
+    lab.appendChild(r);
+    var on = el('span', 'on'); on.appendChild(el('b', null, x.n));
+    var o = el('span', 'orig', x.o); o.lang = x.l === 'Hebraico' ? 'he' : 'el'; if (x.l === 'Hebraico') o.dir = 'rtl';
+    on.appendChild(o); lab.appendChild(on);
+    lab.appendChild(el('span', 'm', x.l + '. ' + x.m));
+    lab.appendChild(el('span', 'v', x.v));
+    $('o-nome').appendChild(lab);
+  });
+  MUSICAS.forEach(function(x, i){
+    var lab = el('label', 'opt');
+    var r = el('input'); r.type = 'radio'; r.name = 'musica'; r.value = x.t === 'Outra' ? 'Outra' : x.t + ' (' + x.a + ')'; r.id = 'mu-' + i;
+    r.addEventListener('change', function(){ $('musica-outra').hidden = r.value !== 'Outra'; if (r.value === 'Outra') $('musica-outra').focus(); });
+    lab.appendChild(r);
+    var on = el('span', 'on'); on.appendChild(el('b', null, x.t)); lab.appendChild(on);
+    lab.appendChild(el('span', 'art', x.a));
+    $('o-musica').appendChild(lab);
+  });
+
+  function simple(list, box, name){
+    list.forEach(function(x, i){
+      var lab = el('label', 'opt');
+      var r = el('input'); r.type = 'radio'; r.name = name; r.value = x.v; r.id = name + '-' + i;
+      r.addEventListener('change', updTotal);
+      lab.appendChild(r);
+      var on = el('span', 'on'); on.appendChild(el('b', null, x.t)); if (x.p) on.appendChild(el('span', 'art', x.p)); lab.appendChild(on);
+      if (x.d) lab.appendChild(el('span', 'art', x.d));
+      $(box).appendChild(lab);
+    });
+  }
+  simple(BECAS, 'o-beca', 'beca'); simple(PLUMA, 'o-pluma', 'pluma'); simple(CANUDO, 'o-canudo', 'canudo');
+  function valor(){ return checked('canudo') === 'Sim' ? 140 : 120; }
+  function brl(n){ return 'R$ ' + n.toFixed(2).replace('.', ','); }
+  function updTotal(){ $('beca-total').textContent = checked('beca') ? 'Valor estimado da sua beca: ' + brl(valor()) : ''; }
+
+  function clean(s){ return (s || '').replace(/\s+/g, ' ').trim(); }
+  function checked(name){ var r = document.querySelector('input[name="' + name + '"]:checked'); return r ? r.value : ''; }
+  function rolar(id){
+    var box = $(id);
+    box.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+    try { box.focus({preventScroll: true}); } catch(e){}
+  }
+
+  // Prazo
+  function prazoTexto(){
+    try {
+      var p = {};
+      new Intl.DateTimeFormat('pt-BR', {timeZone: 'America/Belem', weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit', hour12: false})
+        .formatToParts(PRAZO).forEach(function(x){ p[x.type] = x.value; });
+      return 'Votação aberta até ' + p.weekday + ', ' + p.day + ' de ' + p.month + ', às ' + p.hour + 'h' + p.minute + '.';
+    } catch(e){ return ''; }
+  }
+  function encerrar(){
+    $('f').hidden = true; $('ok-out').hidden = true; $('voto-out').hidden = true;
+    $('fechada').hidden = false; $('prazo').textContent = 'Votação encerrada.';
+  }
+  function encerrada(){ return Date.now() > PRAZO.getTime(); }
+  if (encerrada()) encerrar(); else $('prazo').textContent = prazoTexto();
+
+  // Voto
+  function coletar(){
+    var mu = checked('musica');
+    if (mu === 'Outra') mu = clean($('musica-outra').value);
+    return {
+      nome: clean($('nome').value), turma: checked('nome-turma'), musica: mu,
+      paraninfo: clean($('paraninfo').value), professor: clean($('professor').value),
+      beca: checked('beca'), capelo: checked('pluma'), canudo: checked('canudo'), tamanho: clean($('tamanho').value),
+      valor: valor(), site: $('site').value
+    };
+  }
+  function faltando(v){
+    var f = [];
+    if (!v.nome) f.push('seu nome');
+    if (!v.turma) f.push('o nome da turma');
+    if (!v.musica) f.push(checked('musica') === 'Outra' ? 'qual é a outra música' : 'a música de entrada');
+    if (!v.beca) f.push('o modelo da beca');
+    if (!v.capelo) f.push('capelo com ou sem pluma');
+    if (!v.canudo) f.push('se quer o canudo com seu nome');
+    if (!v.tamanho) f.push('o tamanho ou a altura');
+    return f;
+  }
+  function linhas(v){
+    return CAMPOS.map(function(c){ return [c[0], v[c[1]] || 'sem sugestão']; }).concat([['Valor estimado', brl(v.valor)]]);
+  }
+  function textoWhatsApp(v){
+    return MARK + '\n' + linhas(v).map(function(x){ return x[0] + ': ' + x[1]; }).join('\n');
+  }
+
+  function postar(v){
+    if (!/^https?:\/\//.test(URL_APPS_SCRIPT)) return Promise.reject(new Error('URL do Apps Script não configurada'));
+    var limite = new Promise(function(_, rej){ setTimeout(function(){ rej(new Error('tempo esgotado')); }, TEMPO_LIMITE_MS); });
+    // text/plain evita a pré-checagem de CORS, que o Apps Script não atende
+    var envio = fetch(URL_APPS_SCRIPT, {
+      method: 'POST',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify(v)
+    }).then(function(res){ return res.json(); });
+    return Promise.race([envio, limite]);
+  }
+
+  var enviando = false;
+  function enviar(v){
+    enviando = true;
+    var b = $('enviar'); b.disabled = true; b.textContent = 'Enviando...'; $('tentar').disabled = true;
+    var p;
+    try { p = postar(v); } catch(e){ p = Promise.reject(e); }
+    p.then(function(r){
+      if (r && r.ok) sucesso(v);
+      else if (r && r.erro === 'encerrada') encerrar();
+      else planoB(v);
+    }, function(){ planoB(v); }).then(function(){
+      enviando = false; b.disabled = false; b.textContent = 'Enviar meu voto'; $('tentar').disabled = false;
+    });
+  }
+  function sucesso(v){
+    var dl = $('resumo'); dl.innerHTML = '';
+    linhas(v).forEach(function(x){ dl.appendChild(el('dt', null, x[0])); dl.appendChild(el('dd', null, x[1])); });
+    $('f').hidden = true; $('voto-out').hidden = true; $('ok-out').hidden = false;
+    rolar('ok-out');
+  }
+  function planoB(v){
+    $('voto-txt').textContent = textoWhatsApp(v);
+    $('copiar-voto-ok').textContent = '';
+    $('voto-out').hidden = false;
+    rolar('voto-out');
+  }
+
+  $('f').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if (enviando) return;
+    if (encerrada()){ encerrar(); return; }
+    var v = coletar(), f = faltando(v);
+    if (f.length){ $('f-err').textContent = 'Falta preencher: ' + f.join(', ') + '.'; $('f-err').hidden = false; return; }
+    $('f-err').hidden = true;
+    enviar(v);
+  });
+  $('tentar').addEventListener('click', function(){ $('enviar').click(); });
+  $('alterar').addEventListener('click', function(){ $('ok-out').hidden = true; $('f').hidden = false; $('nome').focus(); });
+
+  function copy(preId, okId){
+    var text = $(preId).textContent;
+    function fallback(){
+      var r = document.createRange(); r.selectNodeContents($(preId));
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      $(okId).textContent = 'Texto selecionado. Use copiar do seu aparelho.';
+    }
+    try {
+      navigator.clipboard.writeText(text).then(function(){ $(okId).textContent = 'Copiado.'; }, fallback);
+    } catch(e){ fallback(); }
+  }
+  $('copiar-voto').addEventListener('click', function(){ copy('voto-txt', 'copiar-voto-ok'); });
+})();
+</script>
+</body>
+</html>
