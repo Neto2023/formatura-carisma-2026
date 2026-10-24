@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Comissao de Formatura Carisma//Save the date//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:formatura-carisma-intensivo-2026@neto2023.github.io
+DTSTAMP:20261024T120000Z
+DTSTART:20261205T220000Z
+DTEND:20261206T010000Z
+SUMMARY:Formatura Carisma Intensivo 2026
+LOCATION:Igreja Batista da Lagoinha Marabá\, Rodovia Transamazônica\, km 
+ 5\, em frente ao Supermercado Líder\, Marabá\, PA
+DESCRIPTION:Cerimônia de formatura da turma Carisma Intensivo 2026.\nhttps
+ ://neto2023.github.io/formatura-carisma-2026/save-the-date/
+URL:https://neto2023.github.io/formatura-carisma-2026/save-the-date/
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Amanhã: Formatura Carisma Intensivo 2026
+END:VALARM
+END:VEVENT
+END:VCALENDAR

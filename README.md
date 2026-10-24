@@ -34,6 +34,15 @@ Se o envio falhar, o formulário mostra o voto em texto com o botão "Copiar vot
 | `index.html` | O formulário. Página única, sem dependências além das fontes do Google. |
 | `apps-script/Code.gs` | Script da planilha: recebe os votos e gera o resultado. |
 | `apps-script/LEIA-ME.md` | Passo a passo de implantação, apuração e situações do dia a dia. |
+| `save-the-date/index.html` | Página "Save the date" da cerimônia, com contagem regressiva, agenda e compartilhamento. |
+| `save-the-date/formatura-carisma-2026.ics` | Evento para a agenda do iPhone e do Outlook. |
+| `save-the-date/og.png` e `og-modelo.html` | Imagem da prévia no WhatsApp e o modelo que a gera. |
+
+## Save the date
+
+**Link:** https://neto2023.github.io/formatura-carisma-2026/save-the-date/
+
+Cerimônia em sábado, 5 de dezembro de 2026, às 19h, na Igreja Batista da Lagoinha Marabá (Rodovia Transamazônica, km 5, em frente ao Supermercado Líder). Depois da apuração, preencher a constante `TURMA` no script da página com os dados do nome vencedor, copiados da lista `NOMES` do formulário.
 
 ## Para a comissão
 
