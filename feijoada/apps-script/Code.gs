@@ -1,16 +1,16 @@
 /**
  * Feijoada Solidária · Carisma Intensivo 2026.
- * Script vinculado à planilha de encomendas: recebe os pedidos da página feijoada/index.html (doPost),
+ * Script vinculado à planilha de encomendas: recebe os pedidos da seção Feijoada do save-the-date/index.html (doPost),
  * guarda os comprovantes de Pix numa pasta do Drive e monta o resumo de vendas e a lista de retirada.
  * Passo a passo de implantação em feijoada/apps-script/LEIA-ME.md.
  */
 
-// Encerramento das encomendas, no horário de Belém (UTC-3). Manter igual ao PRAZO de feijoada/index.html.
+// Encerramento das encomendas, no horário de Belém (UTC-3). Manter igual ao PRAZO do save-the-date/index.html.
 var PRAZO = new Date('2026-11-21T23:59:59-03:00');
 var FUSO = 'America/Belem';
 var VALOR = 25;          // preço da porção, em reais
 var MAX_QTD = 30;        // teto de porções por pedido, contra erro de digitação
-var FORMAS = ['Retirar no local', 'Comer no local'];   // manter igual a FORMAS de feijoada/index.html
+var FORMAS = ['Retirar no local', 'Comer no local'];   // manter igual a FORMAS do save-the-date/index.html
 var ABA_PEDIDOS = 'Pedidos';
 var ABA_RESUMO = 'Resumo';
 var PASTA = 'Comprovantes Feijoada Solidária 2026';

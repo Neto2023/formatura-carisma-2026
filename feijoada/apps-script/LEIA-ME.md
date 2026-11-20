@@ -1,6 +1,9 @@
 # Feijoada Solidária: como colocar as encomendas no ar
 
-Página: https://neto2023.github.io/formatura-carisma-2026/feijoada/
+Onde fica: na página da formatura (save the date), seção **Feijoada Solidária**, logo abaixo da contagem regressiva:
+https://neto2023.github.io/formatura-carisma-2026/save-the-date/#feijoada
+
+A seção aparece até domingo, 22/11, às 16h, e depois some sozinha da página.
 
 Mesmo modelo da votação: a página no GitHub Pages envia cada pedido para um Google Apps Script, que grava numa planilha no Drive da comissão. Leva uns 15 minutos. Tudo o que pede login é feito pelo senhor; o Claude Code nunca digita senha.
 
@@ -12,7 +15,7 @@ Mesmo modelo da votação: a página no GitHub Pages envia cada pedido para um G
 Celular do comprador
    │  preenche nome, WhatsApp, porções e como vai receber
    ▼
-feijoada/index.html (GitHub Pages)
+save-the-date/index.html, seção Feijoada (GitHub Pages)
    │  envia o pedido (POST)                    ┌─ responde com o número do pedido (F001, F002...)
    ▼                                           │
 Apps Script (app da web) ──────────────────────┘
@@ -47,7 +50,7 @@ Se a planilha não responder, a página continua funcionando (plano B): mostra o
 
 ## 4. Entregar a URL ao Claude Code
 
-Mande a URL. Ele cola na constante `URL_APPS_SCRIPT` do `feijoada/index.html` e publica.
+Mande a URL. Ele cola na constante `URL_APPS_SCRIPT` do script da feijoada no `save-the-date/index.html` e publica.
 
 ## 5. Teste antes de divulgar
 
@@ -73,10 +76,11 @@ Mande a URL. Ele cola na constante `URL_APPS_SCRIPT` do `feijoada/index.html` e 
 
 | O quê | Onde |
 |---|---|
-| Prazo das encomendas | `PRAZO` no `index.html` **e** no `Code.gs` (depois de mudar o `Code.gs`: **Implantar** > **Gerenciar implantações** > lápis > **Nova versão**) |
-| Local e horário do almoço | `LOCAL` e `HORARIO` no `index.html` |
-| WhatsApp que recebe comprovantes | `WHATSAPP` no `index.html` |
-| Formas de receber | `FORMAS` no `index.html` e no `Code.gs` (iguais) |
+| Prazo das encomendas | `PRAZO` no `save-the-date/index.html` **e** no `Code.gs` (depois de mudar o `Code.gs`: **Implantar** > **Gerenciar implantações** > lápis > **Nova versão**) |
+| Local e horário do almoço | `LOCAL` e `HORARIO` no `save-the-date/index.html` |
+| Quando a seção some da página | `FIM` no `save-the-date/index.html` |
+| WhatsApp que recebe comprovantes | `WHATSAPP` no `save-the-date/index.html` |
+| Formas de receber | `FORMAS` no `save-the-date/index.html` e no `Code.gs` (iguais) |
 | Preço | `VALOR` nos dois arquivos |
 
 Regra de texto do projeto: não usar travessão.
