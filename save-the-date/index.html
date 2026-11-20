@@ -6,15 +6,15 @@
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#681111">
 <title>Save the date · Formatura Carisma 2026</title>
-<meta name="description" content="Formatura Carisma Intensivo 2026: sábado, 5 de dezembro, às 19h, na Igreja Batista da Lagoinha Marabá.">
+<meta name="description" content="Formatura Carisma Intensivo 2026: domingo, 6 de dezembro, às 10h, na Igreja Batista da Lagoinha Marabá.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://neto2023.github.io/formatura-carisma-2026/save-the-date/">
 <meta property="og:title" content="Save the date: Formatura Carisma Intensivo 2026">
-<meta property="og:description" content="Sábado, 5 de dezembro de 2026, às 19h, na Igreja Batista da Lagoinha Marabá.">
-<meta property="og:image" content="https://neto2023.github.io/formatura-carisma-2026/save-the-date/og.png">
+<meta property="og:description" content="Domingo, 6 de dezembro de 2026, às 10h, na Igreja Batista da Lagoinha Marabá.">
+<meta property="og:image" content="https://neto2023.github.io/formatura-carisma-2026/save-the-date/og-v2.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Save the date da Formatura Carisma Intensivo 2026: sábado, 5 de dezembro, às 19h">
+<meta property="og:image:alt" content="Save the date da Formatura Carisma Intensivo 2026: domingo, 6 de dezembro, às 10h">
 <meta name="twitter:card" content="summary_large_image">
 <!-- A página tem foto da turma: circula pelo WhatsApp, mas fica fora dos buscadores -->
 <meta name="robots" content="noindex">
@@ -90,6 +90,65 @@ footer b{font-family:var(--display);color:var(--accent)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .band :focus-visible{outline-color:var(--band-ink)}
+.nova{margin:10px auto 0;text-align:center;font-size:14px;font-weight:700;color:var(--band-ink);background:rgba(0,0,0,.22);border-radius:999px;padding:6px 14px;width:fit-content;max-width:100%;box-sizing:border-box}
+.fj-cta{display:block;margin:14px auto 0;width:fit-content;max-width:100%;box-sizing:border-box;text-align:center;font-weight:800;text-decoration:none;color:#2A1A10;background:#E2B04A;border-radius:999px;padding:9px 18px}
+
+/* Feijoada Solidária: encomenda com Pix dentro do save the date. Some depois do almoço de 22/11. */
+.fj{border:1px solid var(--accent);border-radius:14px;overflow:hidden;background:var(--surface)}
+.fj-top{background:#2A1A10;color:#F6EBD3;padding:18px}
+.fj-top .fj-eye{margin:0;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:#E2B04A}
+.fj-top h2{font-size:clamp(26px,7vw,34px);letter-spacing:-.01em;text-transform:none;color:#F6EBD3;font-weight:800;margin:2px 0 4px}
+.fj-top p{margin:0}
+.fj-top .fj-preco{font-family:var(--display);font-weight:800;font-size:clamp(26px,7vw,32px);color:#E2B04A;margin-top:8px}
+.fj-top .fj-preco span{font-family:var(--body);font-weight:400;font-size:15px;color:#CDB894}
+.fj-top .fj-info{color:#CDB894;font-size:15px}
+.fj-top .fj-vend{color:#E2B04A;font-weight:700;margin-top:6px}
+.fj-body{padding:18px;display:flex;flex-direction:column;gap:16px}
+.fj-cartaz{display:block;max-width:300px;width:100%;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.fj-cartaz img{display:block;width:100%;height:auto}
+.fj-passo{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0}
+.fj-tit{font-family:var(--display);font-weight:800;font-size:22px;line-height:1.2;margin:0;color:var(--accent);letter-spacing:0;text-transform:none}
+.fj form{display:flex;flex-direction:column;gap:16px}
+.fj-field{display:flex;flex-direction:column;gap:6px;border:0;margin:0;padding:0;min-width:0}
+.fj-field > label,.fj-field > .fj-lbl,.fj-field > legend{font-weight:700;padding:0}
+.fj-hint{margin:0;color:var(--muted);font-size:14px}
+.fj input[type=text],.fj input[type=tel],.fj textarea{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:11px 12px;width:100%;box-sizing:border-box}
+.fj textarea{min-height:60px;resize:vertical}
+.fj input:focus,.fj textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px rgba(104,17,17,.15)}
+.fj-qtd{display:flex;align-items:center;gap:10px}
+.fj-qtd button{width:48px;height:48px;border-radius:12px;border:1px solid var(--accent);background:var(--surface);color:var(--accent);font:800 24px var(--display);cursor:pointer}
+.fj-qtd button:disabled{opacity:.35;cursor:default}
+.fj-qtd output{min-width:56px;text-align:center;font:800 30px var(--display);font-variant-numeric:tabular-nums}
+.fj-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.fj-opt{position:relative;display:block;border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 42px;cursor:pointer}
+.fj-opt input{position:absolute;left:14px;top:15px;width:18px;height:18px;margin:0;accent-color:var(--accent)}
+.fj-opt b{display:block}
+.fj-opt span{display:block;font-size:14px;color:var(--muted)}
+.fj-opt:has(input:checked){border-color:var(--accent);background:var(--sel)}
+.fj-total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed var(--line);padding-top:14px;font-family:var(--display)}
+.fj-total span{font-weight:600;color:var(--muted)}
+.fj-total b{font-size:28px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}
+.fj .acoes .btn{flex:1 1 200px}
+.fj .btn{flex:0 0 auto;font-weight:800;padding:13px 18px;border-radius:12px;text-align:center}
+.fj .btn:disabled{opacity:.6;cursor:progress}
+.fj .btn.zap{background:#1E6B34;border-color:#1E6B34;color:#fff}
+.fj-err{margin:0;color:#A3361F;font-weight:700}
+.fj-ok{margin:0;color:#1E6B34;font-weight:700}
+.fj-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.fj-cod{font-family:var(--display);font-weight:800;font-size:clamp(32px,10vw,44px);color:var(--accent);line-height:1;margin:0;letter-spacing:.02em}
+.fj-res{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:15px}
+.fj-res dt{color:var(--muted)}
+.fj-res dd{margin:0;font-weight:700}
+.fj-pix{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.fj-valor{font-family:var(--display);font-weight:800;font-size:30px;margin:0}
+.fj-qr{width:min(260px,72vw);aspect-ratio:1;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px;box-sizing:border-box}
+.fj-qr svg{display:block;width:100%;height:100%}
+.fj-copia{width:100%;box-sizing:border-box;font:12px/1.35 ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-all;overflow-wrap:anywhere;background:#FBF8F2;border:1px solid var(--line);border-radius:10px;padding:10px;text-align:left;margin:0;user-select:all}
+.fj-receb{margin:0;font-size:14px;color:var(--muted)}
+.fj-receb b{color:var(--fg)}
+.fj ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.fj-file{border:2px dashed var(--line);border-radius:12px;padding:16px;text-align:center;cursor:pointer;display:block;font-weight:700;color:var(--accent)}
+.fj-file input{display:block;margin:10px auto 0;font:inherit;font-weight:400;color:var(--muted);max-width:100%}
 </style>
 </head>
 <body>
@@ -104,10 +163,12 @@ footer b{font-family:var(--display);color:var(--accent)}
     <p class="eyebrow">Save the date</p>
     <h1>Formatura Carisma Intensivo 2026</h1>
     <p class="turma" id="turma-linha">O nome da turma será anunciado em 1º de novembro.</p>
-    <div class="data" role="img" aria-label="Sábado, 5 de dezembro de 2026, às 19h">
-      <span class="lado">Sábado</span><span class="dia">05</span><span class="lado">Dez 2026</span>
+    <div class="data" role="img" aria-label="Domingo, 6 de dezembro de 2026, às 10h">
+      <span class="lado">Domingo</span><span class="dia">06</span><span class="lado">Dez 2026</span>
     </div>
-    <p class="hora" aria-hidden="true">às 19h</p>
+    <p class="hora" aria-hidden="true">às 10h</p>
+    <p class="nova">Nova data: a cerimônia passou para domingo, 6 de dezembro, às 10h.</p>
+    <a class="fj-cta" id="fj-cta" href="#feijoada" hidden>Feijoada Solidária, domingo 22/11: garanta a sua</a>
   </div></header>
 
   <div class="wrap">
@@ -123,14 +184,107 @@ footer b{font-family:var(--display);color:var(--accent)}
       <p class="sr" id="contagem-texto"></p>
     </section>
 
+    <section class="fj" id="feijoada" aria-labelledby="t-fj" hidden>
+      <div class="fj-top">
+        <p class="fj-eye">Ajude a nossa formatura</p>
+        <h2 id="t-fj">Feijoada Solidária</h2>
+        <p><b>Almoço de domingo, 22/11</b></p>
+        <p class="fj-info" id="fj-onde" hidden></p>
+        <p class="fj-preco">R$ 25,00 <span>a porção, no Pix</span></p>
+        <p class="fj-vend" id="fj-vendidas" aria-live="polite" hidden></p>
+        <p class="fj-info" id="fj-prazo"></p>
+      </div>
+      <div class="fj-body">
+        <a class="fj-cartaz" href="../feijoada/cartaz.jpg" target="_blank" rel="noopener">
+          <img src="../feijoada/cartaz-720.jpg" width="720" height="900" loading="lazy" alt="Cartaz: Feijoada Solidária Carisma Intensivo 2026, almoço de domingo 22/11, R$ 25,00, pague com Pix. Feijoada com arroz, farofa, couve e laranja.">
+        </a>
+
+        <form id="fj-f" novalidate>
+          <div><p class="fj-passo">Passo 1 de 2</p><p class="fj-tit">Faça a sua encomenda</p></div>
+          <div class="fj-field">
+            <label for="fj-nome">Seu nome</label>
+            <input type="text" id="fj-nome" autocomplete="name" maxlength="80" required>
+            <p class="fj-hint">É por este nome que vamos entregar a sua feijoada.</p>
+          </div>
+          <div class="fj-field">
+            <label for="fj-zap">WhatsApp com DDD</label>
+            <input type="tel" id="fj-zap" inputmode="tel" autocomplete="tel" placeholder="(94) 9 0000-0000" maxlength="20" required>
+            <p class="fj-hint">Para confirmarmos o pagamento.</p>
+          </div>
+          <div class="fj-field">
+            <span class="fj-lbl" id="fj-l-qtd">Quantas porções?</span>
+            <div class="fj-qtd" role="group" aria-labelledby="fj-l-qtd">
+              <button type="button" id="fj-menos" aria-label="Diminuir">−</button>
+              <output id="fj-qtd" aria-live="polite">1</output>
+              <button type="button" id="fj-mais" aria-label="Aumentar">+</button>
+            </div>
+          </div>
+          <fieldset class="fj-field">
+            <legend>Como vai receber?</legend>
+            <div class="fj-opts" id="fj-formas"></div>
+          </fieldset>
+          <div class="fj-field">
+            <label for="fj-obs">Observação <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
+            <textarea id="fj-obs" maxlength="200" placeholder="Ex.: sem couve, ou quem vai retirar por você"></textarea>
+          </div>
+          <div class="fj-hp" aria-hidden="true"><label>Site <input type="text" id="fj-site" tabindex="-1" autocomplete="off"></label></div>
+          <div class="fj-total"><span>Total</span><b id="fj-total">R$ 25,00</b></div>
+          <p class="fj-err" id="fj-err" role="alert" hidden></p>
+          <button class="btn" type="submit" id="fj-enviar">Fazer pedido e pagar com Pix</button>
+        </form>
+
+        <div id="fj-pag" hidden>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div><p class="fj-passo">Passo 2 de 2</p><p class="fj-tit" id="fj-t-pag" tabindex="-1">Pague com Pix</p></div>
+            <div id="fj-com-codigo">
+              <p class="fj-hint" style="margin-bottom:6px">Número do seu pedido</p>
+              <p class="fj-cod" id="fj-codigo"></p>
+            </div>
+            <p class="fj-err" id="fj-sem-codigo" hidden>Não conseguimos registrar o pedido pela internet agora. Pague o Pix abaixo e toque em <b>Enviar pedido pelo WhatsApp</b> para a comissão anotar.</p>
+            <dl class="fj-res" id="fj-resumo"></dl>
+            <div class="fj-pix">
+              <p class="fj-valor" id="fj-pix-valor"></p>
+              <div class="fj-qr" id="fj-qrcode" role="img" aria-label="QR Code do Pix"></div>
+              <p class="fj-receb">Recebedora: <b>Tatiele Miranda</b>, da comissão de formatura</p>
+              <button class="btn" type="button" id="fj-copiar">Copiar código Pix (copia e cola)</button>
+              <p class="fj-ok" id="fj-copiar-ok" aria-live="polite"></p>
+              <pre class="fj-copia" id="fj-pix-codigo"></pre>
+            </div>
+            <ol>
+              <li>No celular, abra o app do banco e escolha <b>Pix copia e cola</b> (ou leia o QR Code de outra tela).</li>
+              <li>Confira o valor e o nome da recebedora e conclua o pagamento.</li>
+              <li>Envie o comprovante aqui embaixo ou pelo WhatsApp.</li>
+            </ol>
+            <div id="fj-upload">
+              <label class="fj-file" for="fj-arquivo">Enviar comprovante (foto ou PDF)
+                <input type="file" id="fj-arquivo" accept="image/*,application/pdf">
+              </label>
+              <p class="fj-hint" id="fj-up-status" aria-live="polite"></p>
+            </div>
+            <div class="acoes">
+              <a class="btn zap" id="fj-zap-link" target="_blank" rel="noopener">Mandar comprovante pelo WhatsApp</a>
+              <button class="btn ghost" type="button" id="fj-novo">Fazer outro pedido</button>
+            </div>
+            <p class="fj-hint">Guarde o número do pedido. No domingo, é só dizer o seu nome ou o número na hora de retirar.</p>
+          </div>
+        </div>
+
+        <div id="fj-fechado" hidden>
+          <p class="fj-tit">Encomendas antecipadas encerradas</p>
+          <p style="margin:8px 0 14px">Obrigado a todos que garantiram a sua feijoada! Para saber se ainda há porções no dia, fale com a comissão.</p>
+          <div class="acoes"><a class="btn zap" id="fj-zap-fechado" target="_blank" rel="noopener">Falar com a comissão</a></div>
+        </div>
+      </div>
+    </section>
+
     <section class="info" aria-labelledby="t-info">
       <h2 id="t-info">Quando e onde</h2>
       <dl>
-        <div><dt>Quando</dt><dd><b>Sábado, 5 de dezembro de 2026</b>, às 19h</dd></div>
+        <div><dt>Quando</dt><dd><b>Domingo, 6 de dezembro de 2026</b>, às 10h</dd></div>
         <div><dt>Onde</dt><dd><b>Igreja Batista da Lagoinha Marabá</b><br>Rodovia Transamazônica, km 5, em frente ao Supermercado Líder, Marabá, PA</dd></div>
       </dl>
       <div class="acoes">
-        <a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Formatura%20Carisma%20Intensivo%202026&amp;dates=20261205T220000Z/20261206T010000Z&amp;details=Cerim%C3%B4nia%20de%20formatura%20da%20turma%20Carisma%20Intensivo%202026.%0Ahttps%3A%2F%2Fneto2023.github.io%2Fformatura-carisma-2026%2Fsave-the-date%2F&amp;location=Igreja%20Batista%20da%20Lagoinha%20Marab%C3%A1%2C%20Rodovia%20Transamaz%C3%B4nica%2C%20km%205%2C%20em%20frente%20ao%20Supermercado%20L%C3%ADder%2C%20Marab%C3%A1%2C%20PA&amp;ctz=America/Belem" target="_blank" rel="noopener">Adicionar à agenda</a>
+        <a class="btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Formatura%20Carisma%20Intensivo%202026&amp;dates=20261206T130000Z/20261206T160000Z&amp;details=Cerim%C3%B4nia%20de%20formatura%20da%20turma%20Carisma%20Intensivo%202026.%0Ahttps%3A%2F%2Fneto2023.github.io%2Fformatura-carisma-2026%2Fsave-the-date%2F&amp;location=Igreja%20Batista%20da%20Lagoinha%20Marab%C3%A1%2C%20Rodovia%20Transamaz%C3%B4nica%2C%20km%205%2C%20em%20frente%20ao%20Supermercado%20L%C3%ADder%2C%20Marab%C3%A1%2C%20PA&amp;ctz=America/Belem" target="_blank" rel="noopener">Adicionar à agenda</a>
         <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Igreja%20Batista%20da%20Lagoinha%2C%20Rodovia%20Transamaz%C3%B4nica%2C%20km%205%2C%20Marab%C3%A1%2C%20PA" target="_blank" rel="noopener">Como chegar</a>
         <button class="btn ghost" type="button" id="compartilhar">Compartilhar</button>
       </div>
@@ -149,15 +303,15 @@ footer b{font-family:var(--display);color:var(--accent)}
 
 <script>
 (function(){
-  // Cerimônia em 5/12/2026, às 19h no horário de Belém (UTC-3)
-  var INICIO = new Date('2026-12-05T19:00:00-03:00').getTime();
-  var DIA = new Date('2026-12-05T00:00:00-03:00').getTime();
-  var DIA_SEGUINTE = new Date('2026-12-06T00:00:00-03:00').getTime();
+  // Cerimônia em 6/12/2026, às 10h no horário de Belém (UTC-3). Data anterior, adiada: 5/12, às 19h.
+  var INICIO = new Date('2026-12-06T10:00:00-03:00').getTime();
+  var DIA = new Date('2026-12-06T00:00:00-03:00').getTime();
+  var DIA_SEGUINTE = new Date('2026-12-07T00:00:00-03:00').getTime();
   // Depois da apuração de 31/10, preencher com o nome vencedor, copiando os dados da lista NOMES do formulário (../index.html).
   // Exemplo: {n:"Kairós", o:"καιρός", l:"Grego", m:"O tempo oportuno, o tempo de Deus.", v:"Gl 6:9: “a seu tempo ceifaremos, se não desfalecermos.”"}
   var TURMA = null;
   var LINK = 'https://neto2023.github.io/formatura-carisma-2026/save-the-date/';
-  var TEXTO = 'Save the date! Formatura Carisma Intensivo 2026: sábado, 5 de dezembro, às 19h, na Igreja Batista da Lagoinha Marabá.';
+  var TEXTO = 'Save the date! Nova data da Formatura Carisma Intensivo 2026: domingo, 6 de dezembro, às 10h, na Igreja Batista da Lagoinha Marabá.';
   var $ = function(id){ return document.getElementById(id); };
 
   if (TURMA) {
@@ -202,6 +356,246 @@ footer b{font-family:var(--display);color:var(--accent)}
     if (navigator.share){ navigator.share({title: document.title, text: TEXTO, url: LINK}).catch(function(){}); return; }
     window.open('https://wa.me/?text=' + encodeURIComponent(TEXTO + ' ' + LINK), '_blank', 'noopener');
   });
+})();
+</script>
+<script src="../feijoada/qrcode.min.js"></script>
+<script>
+// Feijoada Solidária: encomenda com Pix. Planilha e passo a passo em ../feijoada/apps-script/.
+(function(){
+  // ---------------------------------------------------------------- configuração
+  // Endereço do app da web do Apps Script da feijoada (../feijoada/apps-script/LEIA-ME.md, passo 3).
+  var URL_APPS_SCRIPT = 'https://script.google.com/macros/s/AKfycbw0dIMylnNk85lhfeuH3bMtJ_4YH01jqUu2luQrPFjHJg8n7fDTh67fIAhecBtmrrfh-w/exec';
+  // Fim das encomendas, no horário de Belém (UTC-3). Manter igual ao PRAZO de ../feijoada/apps-script/Code.gs.
+  var PRAZO = new Date('2026-11-21T23:59:59-03:00');
+  // Depois deste momento a seção da feijoada some da página.
+  var FIM = new Date('2026-11-22T16:00:00-03:00');
+  var VALOR = 25;
+  var MAX_QTD = 30;
+  // Manter igual a FORMAS do Code.gs. A descrição aparece embaixo de cada opção.
+  var FORMAS = [['Retirar no local', 'Leva para casa'], ['Comer no local', 'Almoça com a gente']];
+  // Local e horário do almoço. Deixe vazio ('') enquanto não estiver definido.
+  var LOCAL = '';
+  var HORARIO = '';
+  // Dados do Pix, os mesmos do QR Code do cartaz. Nome e cidade sem acento, em maiúsculas.
+  var PIX_CHAVE = '+5594984310403';
+  var PIX_NOME = 'TATIELE MIRANDA';
+  var PIX_CIDADE = 'MARABA';
+  // WhatsApp que recebe comprovantes e pedidos do plano B (só números, com 55 e DDD).
+  var WHATSAPP = '5594984310403';
+  var TEMPO_LIMITE_MS = 15000;
+  var CHAVE_LOCAL = 'feijoada-carisma-2026';
+
+  if (Date.now() > FIM.getTime()) return;
+  var $ = function(id){ return document.getElementById(id); };
+  $('feijoada').hidden = false; $('fj-cta').hidden = false;
+  var qtd = 1, enviando = false, atual = null;
+
+  function brl(n){ return 'R$ ' + n.toFixed(2).replace('.', ','); }
+  function porcoes(n){ return n + (n === 1 ? ' porção' : ' porções'); }
+  function guardar(o){ try { if (o) localStorage.setItem(CHAVE_LOCAL, JSON.stringify(o)); else localStorage.removeItem(CHAVE_LOCAL); } catch(e){} }
+  function lembrar(){ try { return JSON.parse(localStorage.getItem(CHAVE_LOCAL) || 'null'); } catch(e){ return null; } }
+  function encerrada(){ return Date.now() > PRAZO.getTime(); }
+  function rolar(id, foco){ $(id).scrollIntoView({behavior: 'smooth', block: 'start'}); if (foco) $(foco).focus({preventScroll: true}); }
+
+  // ---------------------------------------------------------------- cabeçalho da seção
+  (function(){
+    var p = {};
+    new Intl.DateTimeFormat('pt-BR', {timeZone: 'America/Belem', weekday: 'long', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'})
+      .formatToParts(PRAZO).forEach(function(x){ p[x.type] = x.value; });
+    $('fj-prazo').textContent = 'Encomendas antecipadas até ' + p.weekday + ', ' + p.day + '/' + p.month + ', às ' + p.hour + 'h' + p.minute + '. Toda a renda vai para a formatura da turma.';
+    if (LOCAL || HORARIO) { $('fj-onde').textContent = [HORARIO, LOCAL].filter(Boolean).join(', '); $('fj-onde').hidden = false; }
+  })();
+
+  // Porções já encomendadas (lido do Apps Script; some se não responder)
+  function contador(){
+    if (!/^https?:\/\//.test(URL_APPS_SCRIPT)) return;
+    fetch(URL_APPS_SCRIPT).then(function(r){ return r.json(); }).then(function(r){
+      if (!r || !r.ok) return;
+      if (r.vendas === 'encerradas') { fechar(); return; }
+      if (r.porcoes > 0) { $('fj-vendidas').textContent = porcoes(r.porcoes) + (r.porcoes === 1 ? ' já garantida!' : ' já garantidas!'); $('fj-vendidas').hidden = false; }
+    }).catch(function(){});
+  }
+
+  // ---------------------------------------------------------------- Pix (BR Code estático, padrão do Banco Central)
+  function campo(id, v){ return id + ('0' + v.length).slice(-2) + v; }
+  function crc16(s){
+    var c = 0xFFFF;
+    for (var i = 0; i < s.length; i++) {
+      c ^= s.charCodeAt(i) << 8;
+      for (var j = 0; j < 8; j++) c = (c & 0x8000) ? ((c << 1) ^ 0x1021) & 0xFFFF : (c << 1) & 0xFFFF;
+    }
+    return ('000' + c.toString(16).toUpperCase()).slice(-4);
+  }
+  // txid: o número do pedido, que aparece no extrato de quem recebe e facilita a conferência
+  function codigoPix(valor, txid){
+    var p = campo('00', '01')
+      + campo('26', campo('00', 'br.gov.bcb.pix') + campo('01', PIX_CHAVE))
+      + campo('52', '0000') + campo('53', '986') + campo('54', valor.toFixed(2)) + campo('58', 'BR')
+      + campo('59', PIX_NOME) + campo('60', PIX_CIDADE)
+      + campo('62', campo('05', txid || '***')) + '6304';
+    return p + crc16(p);
+  }
+  function desenharQR(texto){
+    var box = $('fj-qrcode'); box.innerHTML = '';
+    if (typeof qrcode !== 'function') { box.hidden = true; return; }
+    box.hidden = false;
+    var q = qrcode(0, 'M'); q.addData(texto); q.make();
+    var n = q.getModuleCount(), m = 2, d = '';
+    for (var r = 0; r < n; r++) for (var c = 0; c < n; c++) if (q.isDark(r, c)) d += 'M' + (c + m) + ' ' + (r + m) + 'h1v1h-1z';
+    var t = n + 2 * m;
+    box.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + t + ' ' + t + '" shape-rendering="crispEdges"><rect width="' + t + '" height="' + t + '" fill="#fff"/><path d="' + d + '" fill="#000"/></svg>';
+  }
+
+  // ---------------------------------------------------------------- formulário
+  FORMAS.forEach(function(f, i){
+    var l = document.createElement('label'); l.className = 'fj-opt';
+    var inp = document.createElement('input'); inp.type = 'radio'; inp.name = 'fj-forma'; inp.value = f[0]; if (i === 0) inp.checked = true;
+    var b = document.createElement('b'); b.textContent = f[0];
+    var s = document.createElement('span'); s.textContent = f[1];
+    l.appendChild(inp); l.appendChild(b); l.appendChild(s); $('fj-formas').appendChild(l);
+  });
+  function mudarQtd(n){
+    qtd = Math.max(1, Math.min(MAX_QTD, n));
+    $('fj-qtd').textContent = qtd; $('fj-total').textContent = brl(qtd * VALOR);
+    $('fj-menos').disabled = qtd <= 1; $('fj-mais').disabled = qtd >= MAX_QTD;
+  }
+  $('fj-menos').addEventListener('click', function(){ mudarQtd(qtd - 1); });
+  $('fj-mais').addEventListener('click', function(){ mudarQtd(qtd + 1); });
+  mudarQtd(1);
+
+  function coletar(){
+    var forma = document.querySelector('input[name="fj-forma"]:checked');
+    return {
+      nome: $('fj-nome').value.replace(/\s+/g, ' ').trim(),
+      whatsapp: $('fj-zap').value.replace(/\D/g, ''),
+      quantidade: qtd, forma: forma ? forma.value : '',
+      obs: $('fj-obs').value.replace(/\s+/g, ' ').trim(), site: $('fj-site').value
+    };
+  }
+  function faltando(v){
+    var f = [];
+    if (v.nome.length < 2) f.push('seu nome');
+    if (v.whatsapp.length < 10 || v.whatsapp.length > 13) f.push('WhatsApp com DDD');
+    if (!v.forma) f.push('como vai receber');
+    return f;
+  }
+
+  function postar(corpo, limiteMs){
+    if (!/^https?:\/\//.test(URL_APPS_SCRIPT)) return Promise.reject(new Error('URL do Apps Script não configurada'));
+    var limite = new Promise(function(_, rej){ setTimeout(function(){ rej(new Error('tempo esgotado')); }, limiteMs || TEMPO_LIMITE_MS); });
+    // text/plain evita a pré-checagem de CORS, que o Apps Script não atende
+    var envio = fetch(URL_APPS_SCRIPT, {method: 'POST', headers: {'Content-Type': 'text/plain;charset=utf-8'}, body: JSON.stringify(corpo)})
+      .then(function(res){ return res.json(); });
+    return Promise.race([envio, limite]);
+  }
+
+  $('fj-f').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if (enviando) return;
+    if (encerrada()) { fechar(); return; }
+    var v = coletar(), f = faltando(v);
+    if (f.length) { $('fj-err').textContent = 'Falta preencher: ' + f.join(', ') + '.'; $('fj-err').hidden = false; return; }
+    $('fj-err').hidden = true;
+    enviando = true;
+    var b = $('fj-enviar'); b.disabled = true; b.textContent = 'Registrando o pedido...';
+    var corpo = {acao: 'pedido'}; for (var k in v) corpo[k] = v[k];
+    var p; try { p = postar(corpo); } catch(e){ p = Promise.reject(e); }
+    p.then(function(r){
+      if (r && r.ok && r.pedido) mostrarPagamento({pedido: r.pedido, token: r.token, nome: v.nome, whatsapp: v.whatsapp, qtd: v.quantidade, forma: v.forma, obs: v.obs, valor: r.valor || v.quantidade * VALOR});
+      else if (r && r.erro === 'encerrada') fechar();
+      else if (r && r.erro) { $('fj-err').textContent = r.erro; $('fj-err').hidden = false; }
+      else mostrarPagamento(semCodigo(v));
+    }, function(){ mostrarPagamento(semCodigo(v)); }).then(function(){
+      enviando = false; b.disabled = false; b.textContent = 'Fazer pedido e pagar com Pix';
+    });
+  });
+  function semCodigo(v){ return {pedido: '', token: '', nome: v.nome, whatsapp: v.whatsapp, qtd: v.quantidade, forma: v.forma, obs: v.obs, valor: v.quantidade * VALOR}; }
+
+  // ---------------------------------------------------------------- passo 2
+  function textoZap(o){
+    if (o.pedido) return 'Olá! Segue o comprovante do Pix da Feijoada Solidária. Pedido ' + o.pedido + ', ' + o.nome + ', ' + porcoes(o.qtd) + ', ' + brl(o.valor) + '.';
+    return 'Olá! Quero encomendar a Feijoada Solidária do Carisma (22/11).\nNome: ' + o.nome + '\nWhatsApp: ' + o.whatsapp + '\nPorções: ' + o.qtd
+      + '\nComo vou receber: ' + o.forma + (o.obs ? '\nObservação: ' + o.obs : '') + '\nTotal: ' + brl(o.valor) + '\nVou mandar o comprovante do Pix em seguida.';
+  }
+  function mostrarPagamento(o, semRolar){
+    atual = o; guardar(o);
+    var dl = $('fj-resumo'); dl.innerHTML = '';
+    [['Nome', o.nome], ['Porções', String(o.qtd)], ['Como vai receber', o.forma], ['Total', brl(o.valor)]].concat(o.obs ? [['Observação', o.obs]] : [])
+      .forEach(function(x){ var dt = document.createElement('dt'), dd = document.createElement('dd'); dt.textContent = x[0]; dd.textContent = x[1]; dl.appendChild(dt); dl.appendChild(dd); });
+    $('fj-com-codigo').hidden = !o.pedido; $('fj-codigo').textContent = o.pedido;
+    $('fj-sem-codigo').hidden = !!o.pedido; $('fj-upload').hidden = !o.pedido;
+    var pix = codigoPix(o.valor, o.pedido);
+    $('fj-pix-valor').textContent = brl(o.valor); $('fj-pix-codigo').textContent = pix; $('fj-copiar-ok').textContent = '';
+    desenharQR(pix);
+    $('fj-zap-link').textContent = o.pedido ? 'Mandar comprovante pelo WhatsApp' : 'Enviar pedido pelo WhatsApp';
+    $('fj-zap-link').href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(textoZap(o));
+    $('fj-up-status').textContent = o.comprovante ? 'Comprovante já enviado. Obrigado!' : '';
+    $('fj-f').hidden = true; $('fj-fechado').hidden = true; $('fj-pag').hidden = false;
+    if (!semRolar) rolar('fj-pag', 'fj-t-pag');
+  }
+  $('fj-novo').addEventListener('click', function(){
+    guardar(null); atual = null;
+    $('fj-pag').hidden = true; $('fj-obs').value = ''; mudarQtd(1); $('fj-arquivo').value = '';
+    if (encerrada()) { fechar(); return; }
+    $('fj-f').hidden = false; rolar('fj-f'); $('fj-nome').focus();
+  });
+  $('fj-copiar').addEventListener('click', function(){
+    var t = $('fj-pix-codigo').textContent;
+    function manual(){
+      var r = document.createRange(); r.selectNodeContents($('fj-pix-codigo'));
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      $('fj-copiar-ok').textContent = 'Código selecionado. Use copiar do seu aparelho.';
+    }
+    try { navigator.clipboard.writeText(t).then(function(){ $('fj-copiar-ok').textContent = 'Código copiado. Agora cole no app do banco.'; }, manual); } catch(e){ manual(); }
+  });
+
+  // Comprovante: foto reduzida para até 1600 px (fica leve no 4G); PDF vai como está
+  function lerBase64(blob){
+    return new Promise(function(ok, falha){
+      var r = new FileReader(); r.onload = function(){ ok(String(r.result).split(',')[1]); }; r.onerror = falha; r.readAsDataURL(blob);
+    });
+  }
+  function reduzirFoto(file){
+    return new Promise(function(ok, falha){
+      var img = new Image(), url = URL.createObjectURL(file);
+      img.onload = function(){
+        var k = Math.min(1, 1600 / Math.max(img.naturalWidth, img.naturalHeight));
+        var cv = document.createElement('canvas'); cv.width = Math.round(img.naturalWidth * k); cv.height = Math.round(img.naturalHeight * k);
+        var cx = cv.getContext('2d'); cx.fillStyle = '#fff'; cx.fillRect(0, 0, cv.width, cv.height); cx.drawImage(img, 0, 0, cv.width, cv.height);
+        URL.revokeObjectURL(url);
+        ok(cv.toDataURL('image/jpeg', 0.82).split(',')[1]);
+      };
+      img.onerror = function(){ URL.revokeObjectURL(url); falha(new Error('formato')); };
+      img.src = url;
+    });
+  }
+  $('fj-arquivo').addEventListener('change', function(){
+    var file = this.files && this.files[0], st = $('fj-up-status'), inp = this;
+    if (!file || !atual || !atual.pedido) return;
+    var pdf = file.type === 'application/pdf';
+    if (!pdf && !/^image\//.test(file.type)) { st.textContent = 'Envie uma foto ou um PDF do comprovante.'; return; }
+    if (pdf && file.size > 5 * 1024 * 1024) { st.textContent = 'PDF grande demais. Mande pelo WhatsApp, por favor.'; return; }
+    st.textContent = 'Enviando o comprovante...'; inp.disabled = true;
+    (pdf ? lerBase64(file) : reduzirFoto(file)).then(function(b64){
+      return postar({acao: 'comprovante', pedido: atual.pedido, token: atual.token, tipo: pdf ? 'application/pdf' : 'image/jpeg', dados: b64}, 45000);
+    }).then(function(r){
+      if (r && r.ok) { st.textContent = 'Comprovante recebido! A comissão confere o Pix e confirma pelo WhatsApp.'; atual.comprovante = true; guardar(atual); }
+      else st.textContent = 'Não deu certo' + (r && r.erro ? ' (' + r.erro + ')' : '') + '. Mande pelo WhatsApp, por favor.';
+    }, function(){ st.textContent = 'Não conseguimos enviar agora. Mande pelo botão do WhatsApp, por favor.'; })
+      .then(function(){ inp.disabled = false; inp.value = ''; });
+  });
+
+  // ---------------------------------------------------------------- estado inicial
+  function fechar(){
+    $('fj-zap-fechado').href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent('Olá! Ainda tem feijoada para o almoço de domingo, 22/11?');
+    $('fj-f').hidden = true;
+    // Quem já fez pedido continua vendo o seu Pix
+    if (!atual) $('fj-fechado').hidden = false;
+  }
+  var salvo = lembrar();
+  if (salvo && salvo.qtd) mostrarPagamento(salvo, true);
+  if (encerrada()) fechar();
+  contador();
 })();
 </script>
 </body>

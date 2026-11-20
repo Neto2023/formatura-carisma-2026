@@ -1,6 +1,6 @@
 # Votação da Formatura Carisma Intensivo 2026
 
-Formulário online para a turma Carisma Intensivo 2026 (Marabá) escolher o nome da turma e a música de entrada, indicar o professor homenageado, sugerir o paraninfo e fazer o pedido individual de beca. Cerimônia em 5 de dezembro de 2026. Votação aberta até 31 de outubro de 2026, às 23h59 (horário de Belém).
+Formulário online para a turma Carisma Intensivo 2026 (Marabá) escolher o nome da turma e a música de entrada, indicar o professor homenageado, sugerir o paraninfo e fazer o pedido individual de beca. Cerimônia em 6 de dezembro de 2026, às 10h (data adiada; antes era 5 de dezembro, às 19h). Votação aberta até 31 de outubro de 2026, às 23h59 (horário de Belém).
 
 **Link do formulário:** https://neto2023.github.io/formatura-carisma-2026/
 
@@ -36,13 +36,23 @@ Se o envio falhar, o formulário mostra o voto em texto com o botão "Copiar vot
 | `apps-script/LEIA-ME.md` | Passo a passo de implantação, apuração e situações do dia a dia. |
 | `save-the-date/index.html` | Página "Save the date" da cerimônia, com contagem regressiva, agenda e compartilhamento. |
 | `save-the-date/formatura-carisma-2026.ics` | Evento para a agenda do iPhone e do Outlook. |
-| `save-the-date/og.png` e `og-modelo.html` | Imagem da prévia no WhatsApp e o modelo que a gera. |
+| `save-the-date/og-v2.png` e `og-modelo.html` | Imagem da prévia no WhatsApp, já com a nova data, e o modelo que a gera. A `og.png` é a versão anterior, com a data antiga. |
+| `feijoada/apps-script/Code.gs` | Script da planilha de encomendas da Feijoada Solidária. |
+| `feijoada/apps-script/LEIA-ME.md` | Passo a passo de implantação e uso das encomendas da feijoada. |
+| `feijoada/cartaz.jpg`, `cartaz-720.jpg` e `qrcode.min.js` | Cartaz da feijoada e a biblioteca que desenha o QR Code do Pix (MIT, Kazuhiko Arase). |
 
 ## Save the date
 
 **Link:** https://neto2023.github.io/formatura-carisma-2026/save-the-date/
 
-Cerimônia em sábado, 5 de dezembro de 2026, às 19h, na Igreja Batista da Lagoinha Marabá (Rodovia Transamazônica, km 5, em frente ao Supermercado Líder). Depois da apuração, preencher a constante `TURMA` no script da página com os dados do nome vencedor, copiados da lista `NOMES` do formulário.
+Cerimônia em domingo, 6 de dezembro de 2026, às 10h (data adiada; antes era sábado, 5 de dezembro, às 19h), na Igreja Batista da Lagoinha Marabá (Rodovia Transamazônica, km 5, em frente ao Supermercado Líder). Depois da apuração, preencher a constante `TURMA` no script da página com os dados do nome vencedor, copiados da lista `NOMES` do formulário.
+
+## Feijoada Solidária
+
+Encomenda do almoço de domingo, 22 de novembro de 2026 (R$ 25,00 a porção, no Pix), dentro da página do save the date:
+https://neto2023.github.io/formatura-carisma-2026/save-the-date/#feijoada
+
+O pedido vai para uma planilha própria, separada da votação, e a página gera o QR Code Pix com o valor exato e o número do pedido. Encomendas até sábado, 21/11, às 23h59; a seção some da página no domingo, 22/11, às 16h. Implantação e uso no dia a dia: [`feijoada/apps-script/LEIA-ME.md`](feijoada/apps-script/LEIA-ME.md).
 
 ## Para a comissão
 
