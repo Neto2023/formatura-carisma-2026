@@ -6,7 +6,7 @@
  */
 
 // Encerramento das encomendas, no horário de Belém (UTC-3). Manter igual ao PRAZO do save-the-date/index.html.
-var PRAZO = new Date('2026-11-21T23:59:59-03:00');
+var PRAZO = new Date('2026-11-22T15:00:00-03:00');
 var FUSO = 'America/Belem';
 var VALOR = 25;          // preço da porção, em reais
 var MAX_QTD = 30;        // teto de porções por pedido, contra erro de digitação
