@@ -52,7 +52,7 @@ Cerimônia em domingo, 6 de dezembro de 2026, às 10h (data adiada; antes era s�
 Encomenda do almoço de domingo, 22 de novembro de 2026 (R$ 25,00 a porção, no Pix), dentro da página do save the date:
 https://neto2023.github.io/formatura-carisma-2026/save-the-date/#feijoada
 
-O pedido vai para uma planilha própria, separada da votação, e a página gera o QR Code Pix com o valor exato e o número do pedido. Encomendas até sábado, 21/11, às 23h59; a seção some da página no domingo, 22/11, às 16h. Implantação e uso no dia a dia: [`feijoada/apps-script/LEIA-ME.md`](feijoada/apps-script/LEIA-ME.md).
+O pedido vai para uma planilha própria, separada da votação, e a página gera o QR Code Pix com o valor exato e o número do pedido. Encomendas até domingo, 22/11, às 15h (prazo estendido; antes era sábado, 21/11, às 23h59); a seção some da página no domingo, 22/11, às 16h. Implantação e uso no dia a dia: [`feijoada/apps-script/LEIA-ME.md`](feijoada/apps-script/LEIA-ME.md).
 
 ## Para a comissão
 
